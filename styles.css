@@ -1,0 +1,174 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  background: linear-gradient(135deg, #000000, #001f3f);
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor */
+.container {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(145deg, #001830, #000d1a);
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+/* Título con logo */
+.titulo-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease;
+}
+
+.logo-svg {
+  width: 48px;
+  height: 48px;
+}
+.logo-svg svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inputs y etiquetas */
+label {
+  display: block;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #d0d0d0;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #101820;
+  color: #fff;
+  transition: border 0.3s;
+}
+input:focus {
+  outline: none;
+  border-color: #00bfff;
+}
+input::placeholder {
+  color: #888;
+}
+
+/* Botón */
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(to right, #0074D9, #005fa3);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 116, 217, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background: linear-gradient(to right, #005fa3, #004080);
+  transform: scale(1.02);
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 1.5rem;
+  white-space: pre-wrap;
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 6px;
+  color: #00ffcc;
+}
+
+/* Footer */
+.marca-logo {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+.marca-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.marca-logo p {
+  font-size: 0.875rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+  button {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+}
+
+/* ... Mantén todo igual hasta aquí ... */
+
+.tipo-tarjeta {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #00ffcc;
+  font-weight: 500;
+}
+
+/* Resto del código CSS sigue igual */
+.tipo-tarjeta {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #00ffc8;
+  margin-top: 4px;
+}
+input, button {
+  transition: all 0.3s ease-in-out;
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}
