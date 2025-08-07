@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gen CarDM</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="titulo-logo">
+      <div class="logo-svg">
+        <!-- Logo SVG -->
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="52" height="32" rx="6" fill="url(#cardGradient)" stroke="#00bfff" stroke-width="1.5"/>
+          <rect x="12" y="24" width="24" height="4" rx="2" fill="white" opacity="0.6">
+            <animate attributeName="x" values="12;28;12" dur="2s" repeatCount="indefinite"/>
+          </rect>
+          <circle cx="48" cy="36" r="4" fill="white" opacity="0.4"/>
+          <defs>
+            <linearGradient id="cardGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0074D9"/>
+              <stop offset="1" stop-color="#00bfff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <h1>Gen CarDM</h1>
+    </div>
+
+    <form id="form-generador" autocomplete="off">
+      <div class="campo">
+        <label for="bin">BIN (ej. 473702xxxxxx):</label>
+        <input type="text" id="bin" name="bin" placeholder="Ingresa el BIN con X" required>
+        <p class="tipo-tarjeta" id="tipo-tarjeta">Tipo: -</p>
+      </div>
+
+      <div class="campo">
+        <label for="cvv">CVV fijo:</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3" inputmode="numeric" placeholder="Opcional" autocomplete="cc-csc">
+      </div>
+
+      <div class="campo">
+        <label for="expiry">Fecha (MM/YY):</label>
+        <input type="text" id="expiry" name="expiry" maxlength="5" placeholder="MM/YY" inputmode="numeric">
+      </div>
+
+      <button type="button" onclick="generarTarjetas()">Generar</button>
+    </form>
+<div class="campo">
+  <label for="cantidad">Cantidad de tarjetas:</label>
+  <input type="number" id="cantidad" name="cantidad" min="1" max="100" value="10">
+</div>
+
+    <section class="resultado" id="resultado" aria-live="polite"></section>
+
+    <footer class="marca-logo">
+      <img src="logo.png" alt="Logo DM Streaming" />
+      <p>Creado por <strong>DM Streaming</strong></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
